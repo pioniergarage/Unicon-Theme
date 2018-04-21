@@ -11,7 +11,7 @@
             <?php if(is_single()){ ?>
                 <?php $thumb_url = wp_get_attachment_image_src(get_post_thumbnail_id(),'full', true); ?>
                 <a href="<?php echo esc_url($thumb_url[0]); ?>" title="<?php the_title(); ?>" class="prettyPhoto" rel="bookmark">
-                    <?php the_post_thumbnail('blog'); ?>
+                    <?php the_post_thumbnail('full'); ?>
                 </a>
             <?php } else { ?>
                 <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__('Permalink to %s', 'minti'), the_title_attribute('echo=0') ); ?>" rel="bookmark">
